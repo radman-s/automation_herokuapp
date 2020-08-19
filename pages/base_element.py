@@ -37,6 +37,9 @@ class BaseElement(object):
         element.drag_and_drop(source, target)
         return None
 
+    def drag_offset(self, x, y):
+        element = ActionChains(self.driver)
+        element.click_and_hold(self.web_element).move_by_offset(x, y).release().perform()
 
     def context_click(self):
         element = ActionChains(self.driver)

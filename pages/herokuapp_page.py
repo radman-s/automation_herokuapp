@@ -80,3 +80,36 @@ class HerokuappPage(BasePage):
     def hidden_elem(self):
         locator = Locator(By.XPATH, '//div[@id="finish"]/h4')
         return BaseElement(driver=self.driver, locator=locator)
+
+    # exit intent
+    @property
+    def exit_intent(self):
+        locator = Locator(By.XPATH, '//a[text()="Exit Intent"]')
+        return BaseElement(driver=self.driver, locator=locator)
+
+    @property
+    def exit_text(self):
+        locator = Locator(By.XPATH, '//div[@class="example"]/h3')
+        return BaseElement(driver=self.driver, locator=locator)
+
+    # frames
+    @property
+    def frames(self):
+        locator = Locator(By.XPATH, '//a[text()="Frames"]')
+        return BaseElement(driver=self.driver, locator=locator)
+
+    @property
+    def iframe_link(self):
+        locator = Locator(By.XPATH, '//a[text()="iFrame"]')
+        return BaseElement(driver=self.driver, locator=locator)
+
+    # @property
+    # def iframe(self):
+    #     iframe = 'iframe[id="mce_0_ifr"]'
+    #     return iframe
+
+    @property
+    def iframe_text(self):
+        locator = Locator(By.XPATH, '//body[@id="tinymce"]/p')
+        return BaseElement(driver=self.driver, locator=locator)
+

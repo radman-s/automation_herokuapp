@@ -5,6 +5,7 @@ from pages.herokuapp_page import HerokuappPage
 browser = Drivers('--start-maximized').chrome()
 hp = HerokuappPage(driver=browser)
 
+# test start
 hp.go()
 hp.dynamic_loading.click()
 hp.example1.click()
