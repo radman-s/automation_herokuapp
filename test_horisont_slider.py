@@ -1,6 +1,6 @@
 from pages.drivers import Drivers
 from pages.herokuapp_page import HerokuappPage
-import time
+
 
 
 browser = Drivers('--start-maximized').chrome()
