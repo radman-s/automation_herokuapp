@@ -1,8 +1,6 @@
 from pages.drivers import Drivers
 from pages.herokuapp_page import HerokuappPage
 
-
-
 browser = Drivers('--start-maximized').chrome()
 hp = HerokuappPage(driver=browser)
 
