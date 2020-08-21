@@ -103,13 +103,57 @@ class HerokuappPage(BasePage):
         locator = Locator(By.XPATH, '//a[text()="iFrame"]')
         return BaseElement(driver=self.driver, locator=locator)
 
-    # @property
-    # def iframe(self):
-    #     iframe = 'iframe[id="mce_0_ifr"]'
-    #     return iframe
-
     @property
     def iframe_text(self):
         locator = Locator(By.XPATH, '//body[@id="tinymce"]/p')
         return BaseElement(driver=self.driver, locator=locator)
+
+    @property
+    def iframe_p(self):
+        locator = Locator(By.CSS_SELECTOR, 'div[id="mceu_29"]')
+        return BaseElement(driver=self.driver, locator=locator)
+
+    @property
+    def align_right(self):
+        locator = Locator(By.CSS_SELECTOR, 'i[class="mce-ico mce-i-alignright"]')
+        return BaseElement(driver=self.driver, locator=locator)
+
+    # horizontal slider
+    @property
+    def horizont_slider_link(self):
+        locator = Locator(By.XPATH, '//a[text()="Horizontal Slider"]')
+        return BaseElement(driver=self.driver, locator=locator)
+
+    @property
+    def horizont_slider(self):
+        locator = Locator(By.XPATH, '//div[@class="sliderContainer"]/input')
+        return BaseElement(driver=self.driver, locator=locator)
+
+    @property
+    def slider_range(self):
+        locator = Locator(By.CSS_SELECTOR, 'span[id="range"]')
+        return BaseElement(driver=self.driver, locator=locator)
+
+
+
+    # new window
+    @property
+    def muliple_windows(self):
+        locator = Locator(By.XPATH, '//a[text()="Multiple Windows"]')
+        return BaseElement(driver=self.driver, locator=locator)
+
+    @property
+    def click_here(self):
+        locator = Locator(By.XPATH, '//a[text()="Click Here"]')
+        return BaseElement(driver=self.driver, locator=locator)
+
+    @property
+    def text_new_window(self):
+        locator = Locator(By.XPATH, '//h3[text()="New Window"]')
+        return BaseElement(driver=self.driver, locator=locator)
+
+
+
+
+
 

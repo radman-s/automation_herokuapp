@@ -2,6 +2,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver import ActionChains
 from selenium.webdriver.support.select import Select
+from selenium.webdriver.common.keys import Keys
 
 
 
@@ -25,6 +26,10 @@ class BaseElement(object):
 
     def input_text(self, text):
         self.web_element.send_keys(text)
+        return None
+
+    def clear_input(self):
+        self.web_element.clear()
         return None
 
     @property
@@ -56,8 +61,34 @@ class BaseElement(object):
         self.web_element = element
         return None
 
+    def enter(self):
+        element = ActionChains(self.driver)
+        element.send_keys(Keys.ENTER).perform()
+        return None
 
+    def arrow_right(self):
+        element = ActionChains(self.driver)
+        element.send_keys(Keys.ARROW_RIGHT)
+        return None
 
+    def arrow_up(self):
+        element = ActionChains(self.driver)
+        element.send_keys(Keys.ARROW_UP)
+        return None
+
+    # def arrow_left(self, repeat):
+    #     count = 0
+    #     element = ActionChains(self.driver)
+    #     while count < repeat:
+    #         element.send_keys(Keys.ARROW_LEFT)
+    #         count += 1
+    #
+    # def arrow_right(self, repeat):
+    #     count = 0
+    #     element = ActionChains(self.driver)
+    #     while count < repeat:
+    #         element.send_keys(Keys.ARROW_RIGHT)
+    #         count += 1
 
 
 
